@@ -1,0 +1,16 @@
+<div *ngFor="let item of items" class="grid">
+  <div class="item">
+    <a href="#" class="item-artist">
+      <img src="{{item.images[0].url}}">
+      <div class="pattern"></div>
+    </a>
+    <div class="text-box">
+      <h5>{{item.name}}</h5>
+      <div class="artist-list">
+        <a href="/artist/{{artist.id}}" *ngFor="let artist of item.artists">
+          {{artist.name}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<app-topbar></app-topbar>
+<div class="container">
+
+  <div class="grid-2">
+    <div class="artist-info">
+      <img src="{{artist.images[2].url}}">
+      <h3>{{artist.name}}</h3>
+      <h4>Followers: {{artist.followers.total | number : '1.0-0'}}</h4>
+    </div>
+  </div>
+  <div class="grid-10">
+    <ul class="list-artist">
+      <li *ngFor="let track of topTracks">
+          <div><img src="{{track.album.images[2].url}}" class="img-thumb"></div>
+          <div>
+            <h2>{{track.name}}</h2>
+            <small>{{track.duration_ms | date:"mm:ss" }}</small>
+            <h3>Album: {{track.album.name}}</h3>
+          </div>
+      </li>
+    </ul>
+  </div>
+</div>
